@@ -1,0 +1,109 @@
+
+// Buttons
+.button {
+  padding: $spacing-unit;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+
+  &--primary {
+    background-color: $primary-color;
+    color: #fff;
+  }
+
+  &--secondary {
+    background-color: $secondary-color;
+    color: #fff;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.items-box {
+  // Add any default styles that apply to all item boxes here
+  position: relative; // To position dropdown or any additional elements inside the box
+
+  // Small box styles
+  &--small {
+    @include item-box(100px, 50px, #f0f0f0);
+    font-size: 12px;
+    cursor: pointer;
+  }  
+
+  // Medium box styles
+  &--medium {
+    @include item-box(100px, 100px, #f0f0f0); // Adjust width, height, and background color
+    font-size: 14px; // Adjust font size for medium box
+    cursor: pointer; // Visual cue that the box is interactive
+  }
+  
+  // Large box styles
+  &--large {
+    @include item-box(100px, 150px, #dcdcdc); // Adjust width, height, and background color
+    font-size: 16px; // Adjust font size for large box
+    cursor: pointer; // Visual cue that the box is interactive
+  }
+}
+nav {
+  width: 100%;
+  text-align: center;
+  border: solid 1px blue;
+}
+.dropdown {
+  position: relative;
+  display: inline-block; /* Makes the dropdown attach to any trigger element */
+
+  &__button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Ensure button fills the container */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+
+  &__menu {
+    @include dropdown-style(200px, #ffffff, #ccc, #333);
+    position: absolute;
+    top: 100%; /* Position it below the button */
+    left: 0; /* Align it with the button */
+    display: none; /* Hidden by default */
+  }
+
+  &__menu--open {
+    display: block; /* Show the menu when open */
+  }
+
+  &__item {
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 0.9rem;
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+
+  &__item--disabled {
+    color: #aaa;
+    cursor: not-allowed;
+    background-color: transparent;
+
+    &:hover {
+      background-color: transparent; /* No hover effect for disabled items */
+    }
+  }
+}

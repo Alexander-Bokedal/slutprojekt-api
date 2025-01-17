@@ -1,0 +1,18 @@
+
+// CSS Reset (minimal)
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Base styles
+body {
+  font-family: $font-family-base;
+  color: $text-color;
+  line-height: 1.6;
+  background-color: #333;
+  
+}
+
+

@@ -2,12 +2,44 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <script type="module" src="/src/main.ts"></script>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <main class="main-container flex flex--column">
+      <section class="item-container flex flex--column">
+        <nav>I navigate stuff and so on</nav>
+        <label for="sets"> Choose a set</label>
+        <div class="dropdown">
+          <button class="dropdown__button">
+            Select Item
+            <span>&#9662;</span>
+            <!-- Down arrow icon -->
+          </button>
+        </div>
+
+        <div class="grid-three-columns">
+          <div class="grid-item--first items-box items-box--large" id="weapon">
+            W
+          </div>
+          <div class="grid-item--middle items-box items-box--medium" id="head">
+            H
+          </div>
+          <div class="grid-item--middle items-box items-box--large" id="chest">
+            C
+          </div>
+          <div class="grid-item--last items-box items-box--medium" id="gloves">
+            G
+          </div>
+          <div class="grid-item--middle items-box items-box--small" id="waist">
+            W
+          </div>
+          <div class="grid-item--middle items-box items-box--large" id="legs">
+            L
+          </div>
+        </div>
+        <aside>Some stats will be in here, i promised</aside>
+      </section>
+    </main>
   </body>
 </html>

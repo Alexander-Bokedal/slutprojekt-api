@@ -1,0 +1,76 @@
+// Container
+.main-container {
+  height: 100vh;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-unit;
+  background-color: #333;
+}
+.item-container {
+
+  width: 100%;
+  border: solid 1px black;
+}
+.flex {
+  display: flex;
+  margin: -$spacing-unit / 2;
+
+  // Direction variations
+  &--reverse {
+    flex-direction: row-reverse;
+  }
+
+  &--column {
+    @include flex-column;
+  }
+
+  &--column-reverse {
+    @include flex-column;
+    flex-direction: column-reverse;
+  }
+}
+
+.col {
+  flex: 1;
+  padding: $spacing-unit / 2;
+
+  &--half {
+    flex: 0 0 50%;
+  }
+
+  &--third {
+    flex: 0 0 33.333%;
+  }
+}
+.grid-three-columns{
+  display: grid;
+  heigh:100%;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 columns, with the middle column being wider */
+  grit-template-rows: 1fr 3fr 1fr;
+  align-items: center; /* Center items vertically in each grid cell */
+}
+
+.grid-item {
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.grid-item--first {
+  grid-column: 1; /* Position it in the first column */
+  grid-row: 2;
+}
+
+.grid-item--last {
+  grid-column: 3; /* Position it in the third column */
+}
+
+.grid-item--middle {
+  grid-column: 2; /* Position them in the middle column */
+}
+aside {
+text-align: center;
+  border: solid 1px green;
+}
