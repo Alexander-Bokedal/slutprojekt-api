@@ -1,5 +1,7 @@
 
 // Mixin for responsive media queries
+@use '../variables/_variables.scss';
+
 @mixin respond-to($breakpoint) {
   @if $breakpoint == sm {
     @media (max-width: $breakpoint-sm) { @content; }
@@ -29,15 +31,15 @@
   height: $height;
   background-color: $background-color;
   @include flex-center;
-  padding: $spacing-unit;
+  padding: variables.$spacing-unit;
   margin: 10px;
   color: #333;
 }
 @mixin dropdown-style($width, $background-color, $border-color, $text-color) {
   width: $width;
-  background-color: $background-color;
+  background-color:  $background-color;
   border: 1px solid $border-color;
-  color: $text-color;
+  color: variables.$text-color;
   border-radius: 4px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 5px 0; /* Padding for items inside */

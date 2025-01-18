@@ -1,6 +1,8 @@
-@import 'variables';
-@import 'mixins';
-@import 'base';
-@import 'layout';
-@import 'components';
-@import 'utilities';
+@use 'variables/variables' ;
+@use 'mixins/mixins'  ;
+@use 'base/base';
+@use 'layout/layout';
+@use 'components/components';
+@use 'components/item-boxes/item-boxes';
+@use 'components/dropdown/dropdown';
+@use 'utils/utilities'; 

@@ -1,17 +1,14 @@
 
 // Margin and Padding
+@use '../variables/_variables.scss';
 .u-margin-small {
-  margin: $spacing-unit / 2;
 }
 .u-margin-large {
-  margin: $spacing-unit * 2;
 }
 
 .u-padding-small {
-  padding: $spacing-unit / 2;
 }
 .u-padding-large {
-  padding: $spacing-unit * 2;
 }
 
 // Visibility

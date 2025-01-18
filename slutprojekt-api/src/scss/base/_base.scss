@@ -1,5 +1,6 @@
 
 // CSS Reset (minimal)
+@use "../variables/variables";
 * {
   margin: 0;
   padding: 0;
@@ -8,8 +9,8 @@
 
 // Base styles
 body {
-  font-family: $font-family-base;
-  color: $text-color;
+  font-family: variables.$font-family-base;
+  color: variables.$text-color;
   line-height: 1.6;
   background-color: #333;
   

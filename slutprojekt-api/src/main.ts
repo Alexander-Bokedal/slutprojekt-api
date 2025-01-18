@@ -37,3 +37,4 @@ document
 document
   .querySelector<HTMLButtonElement>("#chest")
   ?.addEventListener("click", () => debugging("chest"));
+//TODO: Put in seperate file for items
