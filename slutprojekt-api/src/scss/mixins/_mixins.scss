@@ -34,7 +34,14 @@
   padding: variables.$spacing-unit;
   margin: 10px;
   color: #333;
+  border: solid 2px red;
+   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; // Optional: prevents tiling of the image
+ border-radius: 10px;
 }
+
+
 @mixin dropdown-style($width, $background-color, $border-color, $text-color) {
   width: $width;
   background-color:  $background-color;
