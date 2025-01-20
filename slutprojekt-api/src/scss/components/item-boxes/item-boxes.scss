@@ -6,21 +6,21 @@
 
   // Small box styles
   &--small {
-    @include mixins.item-box(100px, 50px, #f0f0f0);
+    @include mixins.item-box(120px, 70px, #71797E);
     font-size: 12px;
     cursor: pointer;
   }  
 
   // Medium box styles
   &--medium {
-    @include mixins.item-box(100px, 100px, #f0f0f0); // Adjust width, height, and background color
+    @include mixins.item-box(120px, 100px, #71797E); // Adjust width, height, and background color
     font-size: 14px; // Adjust font size for medium box
     cursor: pointer; // Visual cue that the box is interactive
   }
   
   // Large box styles
   &--large {
-    @include mixins.item-box(100px, 150px, #dcdcdc); // Adjust width, height, and background color
+    @include mixins.item-box(120px, 150px, #71797E); // Adjust width, height, and background color
     font-size: 16px; // Adjust font size for large box
     cursor: pointer; // Visual cue that the box is interactive
   }
@@ -31,22 +31,31 @@
   width: 100%;
   border: solid 1px black;
 }
-.grid-three-columns{
+.grid-two-columns{
   display: grid;
   heigh:100%;
-  grid-template-columns: 1fr 1fr 1fr; /* 3 columns, with the middle column being wider */
+  grid-template-columns:  1fr 1fr; /* 3 columns, with the middle column being wider */
+  grid-template-rows: auto auto auto auto;
   align-items: center; /* Center items vertically in each grid cell */
+
 }
 
 
-.grid-item--first {
+
+
+.grid-item--gloves {
+  grid-column: 1; /* Position it in the first column */
+  align-self: end;
+}
+.grid-item--sword {
   grid-column: 1; /* Position it in the first column */
   grid-row: 2;
+  align-self: end;
 }
 
-.grid-item--last {
-  grid-column: 3; /* Position it in the third column */
-}
+// .grid-item--last {
+//   grid-column: 3; /* Position it in the third column */
+// }
 
 .grid-item--middle {
   grid-column: 2; /* Position them in the middle column */

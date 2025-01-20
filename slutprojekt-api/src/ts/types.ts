@@ -73,3 +73,11 @@ export type ArmorSet = {
 export type Crafting = {
   materials: any[];
 };
+
+export type gridItems = {
+  id: number;
+  type: string;
+  size: string;
+  gridPlacement: string;
+  backgroundImage: string;
+};
