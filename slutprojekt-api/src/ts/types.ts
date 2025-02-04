@@ -5,23 +5,25 @@ export type ArmorItem = {
   resistances: Resistances;
   defense: Defense;
   armorSet: ArmorSet;
-  assets: Assets;
+  assets?: Assets;
+  gridPlacement?: string;
+  size?: string;
 };
-//FIX:Change RawArmorItem to take in any properties
-export type RawArmorItem = {
+export type WeaponItem = {
   id: number;
-  type: string;
-  rank: string;
-  rarity: number;
-  defense: Defense;
-  resistances: Resistances;
-  attributes: Attributes;
   name: string;
-  slots: Slot[];
-  skills: Skill[];
-  armorSet: ArmorSet;
-  assets: Assets;
-  crafting: Crafting;
+  type: string;
+  attack: { display: number; raw: number };
+  damageType: string;
+  assets?: { icon: string; image: string };
+  gridPlacement?: string;
+  size?: string;
+};
+export type RawWeaponItem = {
+  [key: string]: any;
+};
+export type RawArmorItem = {
+  [key: string]: any;
 };
 
 export type Assets = {
@@ -43,35 +45,12 @@ export type Resistances = {
   dragon: number;
 };
 
-export type Attributes = {};
-
-export type Slot = {
-  rank: number;
-};
-
-export type Skill = {
-  id: number;
-  level: number;
-  modifiers: Modifiers;
-  description: string;
-  skill: number;
-  skillName: string;
-};
-
-export type Modifiers = {
-  [key: string]: any;
-};
-
 export type ArmorSet = {
   id: number;
   rank: string;
   name: string;
   pieces: number[];
   bonus: number | null;
-};
-
-export type Crafting = {
-  materials: any[];
 };
 
 export type gridItems = {

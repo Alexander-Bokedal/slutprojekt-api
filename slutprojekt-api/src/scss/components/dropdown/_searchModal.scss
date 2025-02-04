@@ -1,0 +1,116 @@
+@use '../../mixins/_mixins.scss';
+
+// Variables for colors and styles
+$modal-bg-color: #333;               // A clean, white modal background
+$modal-overlay-color: rgba(0, 0, 0, 0.3); // A darker overlay for better focus
+$modal-border-radius: 8px;
+$modal-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+$modal-width: 400px;
+
+// Close button colors: a strong red for clear cancellation
+$modal-close-color: #e53935;
+$modal-close-hover-color: #c62828;
+
+// Save button colors: a vibrant green for a positive CTA
+$modal-save-color: #43a047;
+$modal-save-hover-color: #388e3c;
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $modal-overlay-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  .modal-container {
+    background: $modal-bg-color;
+    border-radius: $modal-border-radius;
+    box-shadow: $modal-box-shadow;
+    padding: 20px;
+    width: $modal-width;
+    max-width: 90%;
+    text-align: center;
+
+    .modal-header {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .modal-input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+
+      &:focus {
+        outline: none;
+        border-color: #666;
+        box-shadow: 0 0 5px rgba(102, 102, 102, 0.5);
+      }
+    }
+
+    .modal-close {
+      background-color: $modal-close-color;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-right: 20px;
+
+      &:hover {
+        background-color: $modal-close-hover-color;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+.modal-save {
+      background-color: $modal-save-color;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-left: 20px;
+      &:hover {
+        background-color: $modal-save-hover-color;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+.modal-results {
+  margin: 10px 0 0;
+  padding: 0;
+  max-height: 200px; // Optional: Add scroll for long lists
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: white;
+}
+
+.modal-result-item {
+  padding: 10px;
+  cursor: pointer;
+  color: black;
+  border-bottom: 1px solid gray;
+
+  &:hover {
+    background-color: #f0f0f0;
+  }
+}

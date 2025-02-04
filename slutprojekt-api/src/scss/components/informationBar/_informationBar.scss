@@ -1,0 +1,64 @@
+.container {
+  border: 1px solid #4caf50;  // A pleasant green border
+  max-width: 100%;
+  min-height: 100px;
+  background-color: #333;   // Dark background for contrast
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 1rem 0;
+
+  .information {
+    h2 {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: #f9f9f9;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 0.5rem;
+    }
+
+    .stats-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+
+      // Left Column Styles: Total Damage & Damage Reduction
+      .left-column {
+        flex: 1;  // Takes up equal space as the right column
+        padding-right: 1rem;
+
+        p {
+          font-size: 0.9rem;
+          line-height: 1.5;
+          color: #f9f9f9;
+          margin: 0.5rem 0;
+        }
+      }
+
+      // Right Column Styles: Resistances
+      .right-column {
+        flex: 1;
+
+        // Container for the resistances list
+        div {
+          strong {
+            font-size: 0.9rem;
+            color: #f9f9f9;
+          }
+
+          ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+              padding: 0.4rem 0;
+font-size: 0.9rem;
+              &:last-child {
+                border-bottom: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

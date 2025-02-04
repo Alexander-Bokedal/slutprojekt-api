@@ -27,10 +27,15 @@
 }
 
 .item-container {
+  display: flex;
+  flex-direction: column;
 
-  width: 100%;
-  border: solid 1px black;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  margin: 10px;
+  border-radius: 10px;
 }
+
+
 .grid-two-columns{
   display: grid;
   heigh:100%;
@@ -45,9 +50,9 @@
 
 .grid-item--gloves {
   grid-column: 1; /* Position it in the first column */
-  align-self: end;
+  align-self: start;
 }
-.grid-item--sword {
+.grid-item--weapon {
   grid-column: 1; /* Position it in the first column */
   grid-row: 2;
   align-self: end;
