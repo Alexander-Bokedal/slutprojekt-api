@@ -44,8 +44,11 @@ export const searchModal = (itemType: string) => {
       populateResults(currentFetchedItems.slice(0, 50));
     });
 
+    // Append the checkbox and wrap the text node in a span for better styling
     label.appendChild(checkbox);
-    label.appendChild(document.createTextNode(resistance));
+    const textSpan = document.createElement("span");
+    textSpan.textContent = resistance;
+    label.appendChild(textSpan);
     filterContainer.appendChild(label);
   });
   const closeButton = document.createElement("button");

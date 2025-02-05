@@ -1,17 +1,14 @@
 @use '../../mixins/_mixins.scss';
 
-// Variables for colors and styles
 $modal-bg-color: #333;               // A clean, white modal background
 $modal-overlay-color: rgba(0, 0, 0, 0.3); // A darker overlay for better focus
 $modal-border-radius: 8px;
 $modal-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 $modal-width: 400px;
 
-// Close button colors: a strong red for clear cancellation
 $modal-close-color: #e53935;
 $modal-close-hover-color: #c62828;
 
-// Save button colors: a vibrant green for a positive CTA
 $modal-save-color: #43a047;
 $modal-save-hover-color: #388e3c;
 
@@ -112,5 +109,70 @@ $modal-save-hover-color: #388e3c;
 
   &:hover {
     background-color: #f0f0f0;
+  }
+}
+.filter-container {
+  // Ensure labels are inline-flex containers so that checkbox and text align nicely
+  label {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    margin-right: 1rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.2s, border-color 0.2s;
+
+    // Optional hover state for the label
+    &:hover {
+      background-color: #f0f0f0;
+    }
+
+    // Hide the native checkbox appearance and style our own
+    input[type="checkbox"] {
+      // Remove default appearance
+      appearance: none;
+      -webkit-appearance: none;
+      background-color: #fff;
+      border: 2px solid #ccc;
+      width: 1.2rem;
+      height: 1.2rem;
+      border-radius: 4px;
+      margin-right: 0.5rem;
+      position: relative;
+      cursor: pointer;
+      transition: background-color 0.2s, border-color 0.2s;
+
+      // When checked, change the background and border colors
+      &:checked {
+        background-color: #2196F3;
+        border-color: #2196F3;
+      }
+
+      // Create a checkmark with a pseudo-element when checked
+      &:checked::after {
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: 5px;
+        width: 3px;
+        height: 7px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+
+      // Optional focus style for accessibility
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.3);
+      }
+    }
+
+    // Optional styling for the label text
+    span {
+      font-size: 0.9rem;
+      color: #f9f9f9;
+    }
   }
 }
